@@ -3,7 +3,7 @@ import { ArrowLeft, X } from 'lucide-react';
 
 interface Reference {
   name: string;
-  email: string;
+  email?: string;
   linkedin: string;
   relationship: string;
   description: string;
@@ -46,7 +46,6 @@ export function References({ isOpen, onClose }: ReferencesProps) {
     <AnimatePresence>
       {isOpen && (
         <>
-          {/* Backdrop */}
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
@@ -55,8 +54,6 @@ export function References({ isOpen, onClose }: ReferencesProps) {
             className="fixed inset-0 bg-black/20 z-50"
             onClick={onClose}
           />
-
-          {/* Sliding Panel */}
           <motion.div
             initial={{ x: '100%' }}
             animate={{ x: 0 }}
@@ -65,7 +62,6 @@ export function References({ isOpen, onClose }: ReferencesProps) {
             className="fixed right-0 top-0 bottom-0 w-full md:w-[85%] lg:w-[75%] bg-gray-100 z-50 overflow-hidden"
           >
             <div className="h-full flex flex-col">
-              {/* Header with Back Button */}
               <div className="p-8">
                 <button
                   onClick={onClose}
@@ -75,11 +71,8 @@ export function References({ isOpen, onClose }: ReferencesProps) {
                   <ArrowLeft className="w-6 h-6" />
                 </button>
               </div>
-
-              {/* Content */}
               <div className="flex-1 overflow-y-auto px-8 pb-20">
                 <div className="max-w-6xl mx-auto">
-                  {/* References Grid */}
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-x-16 gap-y-12">
                     {references.map((reference, index) => (
                       <motion.div
@@ -89,20 +82,10 @@ export function References({ isOpen, onClose }: ReferencesProps) {
                         transition={{ delay: 0.1 * index, duration: 0.5 }}
                         className="space-y-3"
                       >
-                        {/* Name */}
                         <h3 className="text-3xl font-medium">{reference.name}</h3>
-
-                        {/* Contact Links */}
                         <div className="flex items-center gap-3 flex-wrap">
-                          <a
-                            href={`mailto:${reference.email}`}
-                            className="text-gray-700 underline hover:text-black transition-colors"
-                          >
-                            {reference.email}
-                          </a>
-                          <span className="text-gray-400">-</span>
-                          <a
-                            href={reference.linkedin}
+                          
+                            <a href={reference.linkedin}
                             target="_blank"
                             rel="noopener noreferrer"
                             className="text-gray-700 underline hover:text-black transition-colors"
@@ -110,13 +93,9 @@ export function References({ isOpen, onClose }: ReferencesProps) {
                             Linkedin
                           </a>
                         </div>
-
-                        {/* Relationship */}
                         <p className="text-sm text-gray-500 uppercase tracking-wide mt-4">
                           {reference.relationship}
                         </p>
-
-                        {/* Description */}
                         <p className="text-gray-700 leading-relaxed">
                           {reference.description}
                         </p>
@@ -125,15 +104,10 @@ export function References({ isOpen, onClose }: ReferencesProps) {
                   </div>
                 </div>
               </div>
-
-              {/* Footer */}
               <div className="absolute bottom-0 left-0 right-0 p-8 flex items-end justify-between pointer-events-none">
-                {/* Large "References" text */}
                 <h2 className="text-6xl md:text-7xl lg:text-8xl font-bold text-black/5 select-none">
                   Referenze
                 </h2>
-
-                {/* Close button */}
                 <button
                   onClick={onClose}
                   className="w-16 h-16 rounded-full bg-white border-2 border-black flex items-center justify-center hover:bg-black hover:text-white transition-colors duration-300 pointer-events-auto"
