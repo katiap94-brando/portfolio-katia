@@ -82,11 +82,11 @@ export function Projects() {
               <AnimatePresence>
                 {hoveredProject === project.id && (
                   <motion.div
-                    initial={{ opacity: 0, scale: 0.8, y: 20 }}
-                    animate={{ opacity: 1, scale: 1, y: 0 }}
-                    exit={{ opacity: 0, scale: 0.8, y: 20 }}
+                    initial={{ opacity: 0, scale: 0.8 }}
+                    animate={{ opacity: 1, scale: 1 }}
+                    exit={{ opacity: 0, scale: 0.8 }}
                     transition={{ duration: 0.4 }}
-                    className="absolute right-20 top-1/2 -translate-y-1/2 z-10 pointer-events-none hidden lg:block"
+                    className="absolute right-20 top-6 z-10 pointer-events-none hidden lg:block"
                   >
                     <div className="w-80 h-64 rounded-lg overflow-hidden shadow-2xl">
                       <img

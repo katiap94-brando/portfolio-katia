@@ -49,7 +49,7 @@ export default function MaestroMindProject() {
             >
               <div className="sticky top-32 space-y-8">
                 <div>
-                  <p className="text-xs uppercase tracking-wider text-gray-500 mb-2">More juicy details</p>
+                  <p className="text-xs uppercase tracking-wider text-gray-500 mb-2">Dettagli progetto</p>
                   <div className="space-y-4 mt-6">
                     <div>
                       <p className="text-sm text-gray-500 uppercase tracking-wide">Anno</p>
@@ -125,11 +125,11 @@ export default function MaestroMindProject() {
                     concentrandomi sulla creazione di un'esperienza utente fluida e intuitiva.
                   </p>
                   <ul className="list-disc list-inside text-gray-700 space-y-2">
-                    <li>Research e analisi degli utenti target</li>
+                    <li>Ricerca e analisi degli utenti target</li>
                     <li>Wireframing e prototipazione</li>
                     <li>Design system e studio dell'identità visiva</li>
                     <li>UI design di tutte le schermate dell'app</li>
-                    <li>Testing e iterazioni basate sui feedback</li>
+                    <li>Test e iterazioni basate sui feedback</li>
                   </ul>
                 </div>
               </motion.div>
@@ -235,7 +235,7 @@ export default function MaestroMindProject() {
             transition={{ duration: 0.6 }}
             className="text-5xl font-bold text-center mb-8 text-gray-900"
           >
-            UX Research
+            Ricerca UX
           </motion.h2>
           <motion.p 
             initial={{ opacity: 0, y: 20 }}

@@ -38,7 +38,7 @@ export default function DashboardFarmaciaProject() {
             >
               <div className="sticky top-32 space-y-8">
                 <div>
-                  <p className="text-xs uppercase tracking-wider text-gray-500 mb-2">Project Details</p>
+                  <p className="text-xs uppercase tracking-wider text-gray-500 mb-2">Dettagli progetto</p>
                   <div className="space-y-4 mt-6">
                     <div>
                       <p className="text-sm text-gray-500 uppercase tracking-wide">Anno</p>
@@ -116,12 +116,13 @@ export default function DashboardFarmaciaProject() {
                 <h2 className="text-sm uppercase tracking-wider text-gray-500 mb-6">Funzionalità Principali</h2>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div className="bg-white p-6 rounded-xl shadow-sm">
-                    <h3 className="font-semibold text-gray-900 mb-2">📊 Analytics & KPI</h3>
-                    <p className="text-sm text-gray-600">Dashboard con metriche di vendita, grafici di andamento e performance analytics</p>
+                    <h3 className="font-semibold text-gray-900 mb-2">📊 Analisi & KPI</h3>
+                    <p className="text-sm text-gray-600">Dashboard con metriche di vendita, grafici di andamento e analisi delle prestazioni</p>
                   </div>
                   <div className="bg-white p-6 rounded-xl shadow-sm">
                     <h3 className="font-semibold text-gray-900 mb-2">💊 Gestione Prodotti</h3>
-                    <p className="text-sm text-gray-600">Inventario medicinali con alert scadenze, stock management e ricerca avanzata</p>
+                    <p className="text-sm text-gray-600">Inventario medicinali con alert scadenze, 
+gestione delle scorte e ricerca avanzata</p>
                   </div>
                   <div className="bg-white p-6 rounded-xl shadow-sm">
                     <h3 className="font-semibold text-gray-900 mb-2">👥 Database Clienti</h3>
@@ -147,11 +148,11 @@ export default function DashboardFarmaciaProject() {
                     del settore farmaceutico, con particolare attenzione alla compliance normativa e alla sicurezza dei dati sanitari.
                   </p>
                   <ul className="list-disc list-inside text-gray-700 space-y-2">
-                    <li>Research e analisi dei bisogni specifici del settore farmaceutico</li>
-                    <li>Information Architecture e struttura della navigazione</li>
+                    <li>Ricerca e analisi dei bisogni specifici del settore farmaceutico</li>
+                    <li>Architettura dell'informazione e struttura della navigazione</li>
                     <li>Design system coerente con focus su leggibilità e accessibilità</li>
                     <li>Prototipazione interattiva di tutte le sezioni</li>
-                    <li>Design responsivo per desktop e tablet</li>
+                    <li>Design per desktop e tablet</li>
                   </ul>
                 </div>
               </motion.div>
@@ -320,10 +321,10 @@ export default function DashboardFarmaciaProject() {
               <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-4">
                 <span className="text-2xl">⚡</span>
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-3">Data Visualization</h3>
+              <h3 className="text-xl font-bold text-gray-900 mb-3">Visualizzazione dei dati</h3>
               <p className="text-gray-600">
-                Grafici chiari e immediati per analytics, tabelle interattive per la gestione dati, 
-                e KPI cards per il monitoraggio rapido delle performance.
+                Grafici chiari e immediati per analisi, tabelle interattive per la gestione dati, 
+                e schede KPI per il monitoraggio rapido delle performance.
               </p>
             </motion.div>
           </div>

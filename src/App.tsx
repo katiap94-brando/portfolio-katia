@@ -8,6 +8,7 @@ import { References } from './components/References';
 import MaestroMindProject from './pages/MaestroMindProject';
 import DashboardFarmaciaProject from './pages/DashboardFarmaciaProject';
 import RistoranteArgentinoProject from './pages/RistoranteArgentinoProject';
+import AboutPage from './pages/AboutPage';
 import { Footer } from './components/Footer';
 
 function HomePage() {
@@ -48,7 +49,7 @@ function HomePage() {
       
       <References isOpen={isReferencesOpen} onClose={() => setIsReferencesOpen(false)} />
 
-        <Footer />
+      <Footer />
     </div>
   );
 }
@@ -58,6 +59,7 @@ export default function App() {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<HomePage />} />
+        <Route path="/chi-sono" element={<AboutPage />} />
         <Route path="/project/maestromind" element={<MaestroMindProject />} />
         <Route path="/project/dashboard-farmacia" element={<DashboardFarmaciaProject />} />
         <Route path="/project/ristorante-argentino" element={<RistoranteArgentinoProject />} />

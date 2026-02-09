@@ -62,7 +62,7 @@ export default function RistoranteArgentinoProject() {
             >
               <div className="sticky top-32 space-y-8">
                 <div>
-                  <p className="text-xs uppercase tracking-wider text-gray-500 mb-2">Project Details</p>
+                  <p className="text-xs uppercase tracking-wider text-gray-500 mb-2">Dettagli progetto</p>
                   <div className="space-y-4 mt-6">
                     <div>
                       <p className="text-sm text-gray-500 uppercase tracking-wide">Anno</p>
@@ -144,14 +144,14 @@ export default function RistoranteArgentinoProject() {
                   </div>
                   <div className="bg-white p-6 rounded-xl shadow-sm">
                     <h3 className="font-semibold text-gray-900 mb-2">📅 Sistema Prenotazioni</h3>
-                    <p className="text-sm text-gray-600">Booking online in tempo reale con selezione di data, ora e numero di persone</p>
+                    <p className="text-sm text-gray-600">Prenotazione online in tempo reale con selezione di data, ora e numero di persone</p>
                   </div>
                   <div className="bg-white p-6 rounded-xl shadow-sm">
                     <h3 className="font-semibold text-gray-900 mb-2">👤 Area Utente</h3>
                     <p className="text-sm text-gray-600">Profilo personalizzato per gestire prenotazioni, preferenze e storico ordini</p>
                   </div>
                   <div className="bg-white p-6 rounded-xl shadow-sm">
-                    <h3 className="font-semibold text-gray-900 mb-2">📖 Brand Storytelling</h3>
+                    <h3 className="font-semibold text-gray-900 mb-2">📖 Narrazione del marchio</h3>
                     <p className="text-sm text-gray-600">Sezione dedicata alla storia del ristorante, tradizione argentina e valori del brand</p>
                   </div>
                 </div>
@@ -170,8 +170,8 @@ export default function RistoranteArgentinoProject() {
                     con particolare attenzione all'identità visiva che richiama la cultura argentina.
                   </p>
                   <ul className="list-disc list-inside text-gray-700 space-y-2">
-                    <li>Research e analisi del target (clientela premium, amanti della cucina gourmet)</li>
-                    <li>Information Architecture e struttura della navigazione</li>
+                    <li>Ricerca e analisi del target (clientela premium, amanti della cucina gourmet)</li>
+                    <li>Architettura dell'informazione e e struttura della navigazione</li>
                     <li>Design system con palette colori ispirata alla tradizione argentina</li>
                     <li>UI design di tutte le pagine del sito (7 sezioni complete)</li>
                     <li>Prototipazione interattiva e responsive design</li>
@@ -269,7 +269,7 @@ export default function RistoranteArgentinoProject() {
               <div className="w-12 h-12 bg-amber-100 rounded-lg flex items-center justify-center mb-4">
                 <span className="text-2xl">🔍</span>
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-3">Research & Discovery</h3>
+              <h3 className="text-xl font-bold text-gray-900 mb-3">Ricerca & Scoperta</h3>
               <p className="text-gray-600">
                 Analisi approfondita della cultura gastronomica argentina, studio della concorrenza e ricerca 
                 sui comportamenti degli utenti nel settore ristorazione premium.
@@ -286,7 +286,7 @@ export default function RistoranteArgentinoProject() {
               <div className="w-12 h-12 bg-amber-100 rounded-lg flex items-center justify-center mb-4">
                 <span className="text-2xl">🎨</span>
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-3">Visual Identity</h3>
+              <h3 className="text-xl font-bold text-gray-900 mb-3">Identità visiva</h3>
               <p className="text-gray-600">
                 Palette colori ispirata ai toni caldi della pampa argentina (ambra, marrone, beige), 
                 tipografia elegante e componenti UI che richiamano l'artigianalità.
@@ -303,7 +303,7 @@ export default function RistoranteArgentinoProject() {
               <div className="w-12 h-12 bg-amber-100 rounded-lg flex items-center justify-center mb-4">
                 <span className="text-2xl">⚡</span>
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-3">Interactive Features</h3>
+              <h3 className="text-xl font-bold text-gray-900 mb-3">Funzionalità interattive</h3>
               <p className="text-gray-600">
                 Implementazione di animazioni fluide, sistema di prenotazione real-time, 
                 form di contatto e integrazione con sistemi di gestione ristorante.
