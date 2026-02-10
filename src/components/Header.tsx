@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useNavigate } from 'react-router';
 import { Linkedin, Mail, Phone } from 'lucide-react';
+import logoKatia from '../assets/logo-katia.png';
 
 interface HeaderProps {
   onReferencesClick: () => void;
@@ -31,8 +32,8 @@ export function Header({ onReferencesClick, currentPage = 'home' }: HeaderProps)
 
   const handleDownloadCV = (language: 'ita' | 'eng') => {
     const cvUrl = language === 'ita'
-      ? '/cv-katia-pasini-ita.pdf'
-      : '/cv-katia-pasini-eng.pdf';
+      ? '/cv-italiano.pdf'
+      : '/cv-english.pdf';
     const link = document.createElement('a');
     link.href = cvUrl;
     link.download = `CV-Katia-Pasini-${language.toUpperCase()}.pdf`;
@@ -50,9 +51,9 @@ export function Header({ onReferencesClick, currentPage = 'home' }: HeaderProps)
           {/* Logo */}
           <button
             onClick={handleHomeClick}
-            className="text-3xl font-bold tracking-tight hover:opacity-70 transition-opacity"
+            className="hover:opacity-70 transition-opacity"
           >
-            KP
+            <img src={logoKatia} alt="Katia Pasini" className="h-10 w-auto" />
           </button>
 
           {/* Desktop Navigation */}
