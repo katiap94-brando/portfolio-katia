@@ -36,7 +36,7 @@ export default function MaestroMindProject() {
         </button>
       </div>
 
-      {/* Hero Section - Editorial Layout */}
+      {/* Hero Section */}
       <div className="pt-32 pb-12 px-8 md:px-16 lg:px-24">
         <div className="max-w-screen-xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-16">
@@ -70,35 +70,34 @@ export default function MaestroMindProject() {
 
             {/* Right Column - Main Content */}
             <div className="lg:col-span-9">
-              {/* Title */}
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.3, duration: 0.6 }}
                 className="mb-12"
               >
-                <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-gray-900 leading-tight text-right">
+                <h1 className="text-4xl md:text-5xl lg:text-7xl font-bold text-gray-900 leading-tight text-right">
                   maestroMind,<br />l'app per imparare<br />musica classica
                 </h1>
               </motion.div>
 
-              {/* Short Description */}
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.4, duration: 0.6 }}
-                className="mb-12 text-right">
+                className="mb-12 text-right"
+              >
                 <p className="text-xl md:text-2xl text-gray-600 leading-relaxed max-w-2xl ml-auto">
                   Un'app che trasforma l'apprendimento della musica classica in un'esperienza coinvolgente attraverso la gamification.
                 </p>
               </motion.div>
 
-              {/* Concept Section */}
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.5, duration: 0.6 }}
-                className="mb-12">
+                className="mb-12"
+              >
                 <h2 className="text-sm uppercase tracking-wider text-gray-500 mb-6">Concept</h2>
                 <div className="prose prose-lg max-w-none">
                   <p className="text-gray-700 leading-relaxed mb-4">
@@ -112,12 +111,12 @@ export default function MaestroMindProject() {
                 </div>
               </motion.div>
 
-              {/* Il mio ruolo Section */}
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.6, duration: 0.6 }}
-                className="mb-12">
+                className="mb-12"
+              >
                 <h2 className="text-sm uppercase tracking-wider text-gray-500 mb-6">Il mio ruolo</h2>
                 <div className="prose prose-lg max-w-none">
                   <p className="text-gray-700 leading-relaxed mb-4">
@@ -144,17 +143,35 @@ export default function MaestroMindProject() {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, amount: 0.2 }}
         transition={{ duration: 0.8 }}
-        className="py-16 px-8 bg-white">
+        className="py-16 bg-white"
+      >
         <div className="max-w-screen-2xl mx-auto">
-          <h2 className="text-2xl font-bold text-center mb-12 text-gray-900">Schermate dell'app</h2>
-          
-          {/* Grid of Screens */}
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8">
-            <LoginPrototype />
-            <SearchPrototype />
-            <PersonalizePrototype />
-            <RegisterPrototype />
-            <DashboardPrototype />
+          <h2 className="text-2xl font-bold text-center mb-4 text-gray-900">Schermate dell'app</h2>
+
+          {/* Hint scroll — visibile solo su mobile */}
+          <div className="flex items-center justify-center gap-2 mb-8 md:hidden text-gray-400 text-sm">
+            <motion.span
+              animate={{ x: [0, 8, 0] }}
+              transition={{ duration: 1.2, repeat: Infinity, ease: "easeInOut" }}
+            >
+              ←
+            </motion.span>
+            <span>Scorri per vedere tutte le schermate</span>
+            <motion.span
+              animate={{ x: [0, -8, 0] }}
+              transition={{ duration: 1.2, repeat: Infinity, ease: "easeInOut" }}
+            >
+              →
+            </motion.span>
+          </div>
+
+          {/* Mobile: scroll orizzontale con swipe — Desktop: griglia */}
+          <div className="flex overflow-x-auto gap-6 pb-4 px-8 snap-x snap-mandatory md:grid md:grid-cols-3 lg:grid-cols-5 md:overflow-visible">
+            {[LoginPrototype, SearchPrototype, PersonalizePrototype, RegisterPrototype, DashboardPrototype].map((Component, i) => (
+              <div key={i} className="snap-center shrink-0 w-[75vw] md:w-auto">
+                <Component />
+              </div>
+            ))}
           </div>
         </div>
       </motion.div>
@@ -162,16 +179,16 @@ export default function MaestroMindProject() {
       {/* Brand Identity Section */}
       <div className="py-16 bg-[#faf8f6]">
         <div className="px-8 mb-12">
-          <motion.h2 
+          <motion.h2
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="text-5xl font-bold text-center mb-8 text-gray-900"
+            className="text-4xl md:text-5xl font-bold text-center mb-8 text-gray-900"
           >
             Brand Identity
           </motion.h2>
-          <motion.p 
+          <motion.p
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -182,18 +199,18 @@ export default function MaestroMindProject() {
           </motion.p>
         </div>
 
-        {/* Colors */}
         <motion.div
           initial={{ opacity: 0, x: -40 }}
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true, amount: 0.2 }}
           transition={{ duration: 0.8 }}
-          className="mb-12 bg-white py-8">
+          className="mb-12 bg-white py-8"
+        >
           <div className="px-8 mb-6">
             <h3 className="text-2xl font-bold text-gray-900">Palette colori</h3>
           </div>
           <div className="overflow-x-auto px-8">
-            <motion.img 
+            <motion.img
               src={coloriImage}
               alt="Palette colori MaestroMind"
               className="w-full rounded-2xl shadow-xl"
@@ -203,20 +220,20 @@ export default function MaestroMindProject() {
           </div>
         </motion.div>
 
-        {/* Typography */}
         <motion.div
           initial={{ opacity: 0, x: 40 }}
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true, amount: 0.2 }}
           transition={{ duration: 0.8 }}
-          className="mb-12 py-8">
+          className="mb-12 py-8"
+        >
           <div className="px-8 mb-6">
             <h3 className="text-2xl font-bold text-gray-900">Tipografia</h3>
           </div>
           <div className="overflow-x-auto px-8">
-            <motion.img 
+            <motion.img
               src={tipografiaImage}
-              alt="Tipografia MaestroMind - Lora e Raleway"
+              alt="Tipografia MaestroMind"
               className="w-full rounded-2xl shadow-xl"
               whileHover={{ scale: 1.01 }}
               transition={{ duration: 0.3 }}
@@ -228,16 +245,16 @@ export default function MaestroMindProject() {
       {/* UX Research Section */}
       <div className="py-16 bg-white">
         <div className="px-8 mb-12">
-          <motion.h2 
+          <motion.h2
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="text-5xl font-bold text-center mb-8 text-gray-900"
+            className="text-4xl md:text-5xl font-bold text-center mb-8 text-gray-900"
           >
             Ricerca UX
           </motion.h2>
-          <motion.p 
+          <motion.p
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -248,18 +265,18 @@ export default function MaestroMindProject() {
           </motion.p>
         </div>
 
-        {/* User Personas */}
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.2 }}
           transition={{ duration: 0.8 }}
-          className="mb-12">
+          className="mb-12"
+        >
           <div className="px-8 mb-8">
             <h3 className="text-2xl font-bold text-gray-900">User Personas</h3>
           </div>
           <div className="overflow-x-auto px-8">
-            <motion.img 
+            <motion.img
               src={userPersonas}
               alt="User Personas"
               className="w-full rounded-2xl shadow-xl"
@@ -269,13 +286,13 @@ export default function MaestroMindProject() {
           </div>
         </motion.div>
 
-        {/* User Flow */}
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.2 }}
           transition={{ duration: 0.8 }}
-          className="mb-12">
+          className="mb-12"
+        >
           <div className="px-8 mb-8">
             <h3 className="text-2xl font-bold text-gray-900">User Flow & Architettura dell'informazione</h3>
             <p className="text-base text-gray-600 mt-4">
@@ -283,7 +300,7 @@ export default function MaestroMindProject() {
             </p>
           </div>
           <div className="overflow-x-auto px-8">
-            <motion.img 
+            <motion.img
               src={userFlowChart}
               alt="User Flow Chart"
               className="w-full rounded-2xl shadow-xl"
@@ -304,7 +321,6 @@ export default function MaestroMindProject() {
             <ArrowLeft className="w-5 h-5" />
             Torna ai progetti
           </button>
-          
           <div className="text-gray-500">
             Progetto 1 di 3
           </div>

@@ -14,7 +14,6 @@ import { Footer } from './components/Footer';
 function HomePage() {
   const [cursorPosition, setCursorPosition] = useState({ x: 0, y: 0 });
   const [isReferencesOpen, setIsReferencesOpen] = useState(false);
-  
 
   useEffect(() => {
     const handleMouseMove = (e: MouseEvent) => {
@@ -27,8 +26,10 @@ function HomePage() {
   }, []);
 
   return (
-    <div className="relative min-h-screen bg-white custom-cursor flex flex-col">
-      {/* Custom Cursor */}
+    // FIX: rimosso "flex flex-col" — causava spazio bianco extra su mobile
+    // perché i figli (Hero, Projects) si stiravano per riempire min-h-screen
+    <div className="relative min-h-screen bg-white custom-cursor">
+      {/* Custom Cursor — visibile solo su desktop */}
       <div
         className="fixed pointer-events-none z-[9999] hidden lg:block"
         style={{
@@ -46,7 +47,7 @@ function HomePage() {
         <Projects />
       </main>
       <ScrollingFooter />
-      
+
       <References isOpen={isReferencesOpen} onClose={() => setIsReferencesOpen(false)} />
 
       <Footer />

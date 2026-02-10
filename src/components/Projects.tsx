@@ -38,14 +38,14 @@ export function Projects() {
   const [hoveredProject, setHoveredProject] = useState<string | null>(null);
 
   return (
-    <section id="projects" className="min-h-screen py-20 px-8 bg-gray-50">
+    <section id="projects" className="py-10 md:py-20 px-6 md:px-8 bg-gray-50">
       <div className="max-w-screen-2xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="mb-16"
+          className="mb-6 md:mb-16"
         >
           <p className="text-xl md:text-2xl text-gray-700 mb-8">
             Ecco una raccolta dei miei lavori! Sentitevi a casa.
@@ -57,7 +57,7 @@ export function Projects() {
             <motion.a
               key={project.id}
               href={project.link}
-              className="block relative py-12 border-b border-dashed border-gray-400 group cursor-pointer"
+              className="block relative py-6 md:py-12 border-b border-dashed border-gray-400 group cursor-pointer"
               onMouseEnter={() => setHoveredProject(project.id)}
               onMouseLeave={() => setHoveredProject(null)}
               initial={{ opacity: 0, y: 20 }}
